@@ -25,8 +25,8 @@ img {
   /* colors */
   --hue: -340;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 36% 57%);
-  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color: hsl(11, 100%, 68%);
+  --base-color-second: hsl(11, 80%, 78%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
@@ -274,7 +274,7 @@ nav.show div.icon-close {
   position: absolute;
   top: -16.8%;
   left: 16.7%;
-  z-index: 0;
+  z-index: 0;  
 }
 
 #home .image img {

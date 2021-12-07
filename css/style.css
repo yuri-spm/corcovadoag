@@ -23,10 +23,10 @@ img {
   --header-height: 4.5rem;
 
   /* colors */
-  --hue: -340;
+  --hue: 1345;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 36% 57%);
-  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color: hsl(11, 100%, 68%);
+  --base-color-second: hsl(26, 100%, 74%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
@@ -138,7 +138,7 @@ body {
 }
 
 /*====  LOGO ============================ */
-.logo {
+/*.logo {
   font: 700 1.31rem var(--title-font);
   color: var(--title-color);
 }
@@ -149,7 +149,7 @@ body {
 
 .logo-alt span {
   color: var(--body-color);
-}
+}*/
 
 /*====  NAVIGATION ============================ */
 nav {
