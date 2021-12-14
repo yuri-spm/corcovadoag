@@ -270,11 +270,12 @@ nav.show div.icon-close {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--base-color-second);
+  background: linear-gradient( to bottom right, #8f807d,#ffb47b, #ff7c5e, #745187,#331b4d 140%);
   position: absolute;
   top: -16.8%;
   left: 16.7%;
   z-index: 0;  
+  
 }
 
 #home .image img {
@@ -318,7 +319,7 @@ nav.show div.icon-close {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--base-color-second);
+  background: linear-gradient(to bottom right, #7E7F83, #E8F1F2, #0A0908);
   position: absolute;
   top: -8.3%;
   left: -33%;
@@ -614,6 +615,10 @@ footer .social a:hover {
   .card {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  #services p{
+    text-align: left;
   }
 
   /* testimonials */
