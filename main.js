@@ -51,7 +51,7 @@ const swiper = new Swiper('.swiper-container', {
 /* ScrollReveal */
 const scrollReveal = ScrollReveal({
   origin: 'top',
-  distance: '30px',
+  distance: '10px',
   duration: 20,
   reset: true
 })
@@ -73,7 +73,7 @@ function backToTop() {
   const backToTopButton = document.querySelector('.back-to-top')
   
 
-  if(window.scrollY >=200) {
+  if(window.scrollY >=80) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
