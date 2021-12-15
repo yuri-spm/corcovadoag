@@ -52,7 +52,7 @@ const swiper = new Swiper('.swiper-container', {
 const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 700,
+  duration: 200,
   reset: true
 })
 
@@ -64,7 +64,7 @@ scrollReveal.reveal(
   #contact .text, #contact .links
   footer .brand, footer .social
   `,
-  { interval: 100 }
+  { interval: 50 }
 )
 
 /* Back to top */
