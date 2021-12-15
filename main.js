@@ -41,7 +41,7 @@ const swiper = new Swiper('.swiper-container', {
   mousewheel: true,
   keyboard: true,
   breakpoints: {
-    767:{
+    770:{
       slidesPerView: 1,
       setWrapperSize: true
     }
