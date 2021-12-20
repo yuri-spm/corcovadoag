@@ -1,4 +1,4 @@
-/*  abre e fecha o menu quando clicar no icone */
+// Abre e fecha o menu quando icone for clicado
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
@@ -8,7 +8,7 @@ for (const element of toggle) {
   })
 }
 
-/* quando clicar em um item do menu, esconder o menu */
+// quando clicar em um item do menu, esconder um menu
 const links = document.querySelectorAll('nav ul li a')
 
 for (const link of links) {
@@ -17,23 +17,27 @@ for (const link of links) {
   })
 }
 
-/* mudar o header da página quando der scroll */
-function changeHeaderWhenScroll(){
-  const header = document.querySelector('#header')
-  const navHeight = header.offsetHeight
+// Mudar o Header quando der scroll
+const header = document.querySelector('#header')
+const navHeight = header.offsetHeight
 
+function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
-    // scroll é maior que a altura do header
     header.classList.add('scroll')
   } else {
-    // menor que a altura do header
     header.classList.remove('scroll')
   }
 }
 
+// Avisar Número Fictício
+const aviso = document.querySelector('#contact a.button')
 
-/* Testimonials carousel slider swiper */
-const swiper = new Swiper('.swiper-container', {
+aviso.addEventListener('click', function () {
+  alert('Esse número não existe, é apenas um número Fictício!')
+})
+
+// Testimonials Swiper Carousel
+const swiper = new swiper('.swiper-container', {
   slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination'
@@ -41,46 +45,44 @@ const swiper = new Swiper('.swiper-container', {
   mousewheel: true,
   keyboard: true,
   breakpoints: {
-    770:{
-      slidesPerView: 1,
+    767: {
+      slidesPerView: 2,
       setWrapperSize: true
     }
   }
 })
 
-/* ScrollReveal */
+// ScrollReveal: Mostrar elementos quando der scroll na página
 const scrollReveal = ScrollReveal({
   origin: 'top',
-  distance: '10px',
-  duration: 5,
+  distance: '30px',
+  duration: 700,
   reset: true
 })
 
 scrollReveal.reveal(
   `#home .image, #home .text,
   #about .image, #about .text,
-  #services header, #services .card,
-  #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links
+  #sevices header, #services .cards,
+  #testimonials header, #testimonials .testimonials,
+  #contact .text, #contact .links,
   footer .brand, footer .social
   `,
-  { interval: 50 }
+  { interval: 100 }
 )
 
-/* Back to top */
+// Botão voltar pro topo
 
+const backToTopButton = document.querySelector('.back-to-top')
 function backToTop() {
-  const backToTopButton = document.querySelector('.back-to-top')
-  
-
-  if(window.scrollY >=80) {
+  if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
   }
 }
 
-/* Menu ativo */
+// Menu Ativo de acordo com a seção visível
 const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrentSection() {
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
@@ -105,7 +107,7 @@ function activateMenuAtCurrentSection() {
   }
 }
 
-/*When Scroll*/
+// When Scroll
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
   backToTop()
