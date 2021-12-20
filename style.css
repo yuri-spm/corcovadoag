@@ -518,7 +518,7 @@ footer .social a:hover {
   opacity: 0;
 
   transition: 0.3s;
-  transform: translateY(50%); /*alterei aqui*/
+  transform: translateY(70%); /*alterei aqui*/
 }
 
 .back-to-top.show {
