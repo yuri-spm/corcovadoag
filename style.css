@@ -1,4 +1,4 @@
-/* ==== RESET ==================================== */
+/*====  RESET ============================ */
 * {
   margin: 0;
   padding: 0;
@@ -18,16 +18,15 @@ img {
   height: auto;
 }
 
-/* ==== VARIABLES ==================================== */
+/*====  VARIABLES ============================ */
 :root {
   --header-height: 4.5rem;
 
-  /* COLORS */
-  /* All Options: 159, 36, 270, 345 */
-  --hue: 159;
+  /* colors */
+  --hue: -340;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 36% 57%);
-  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color: hsl(11, 100%, 68%);
+  --base-color-second: hsl(11, 80%, 78%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
@@ -37,11 +36,12 @@ img {
   /* fonts */
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
-  --title-font: 'poppins', sans-serif;
+
+  --title-font: 'Poppins', sans-serif;
   --body-font: 'DM Sans', sans-serif;
 }
 
-/* ==== BASE ==================================== */
+/*===  BASE ============================ */
 html {
   scroll-behavior: smooth;
 }
@@ -73,28 +73,23 @@ body {
 
 .button:hover {
   background: var(--base-color-alt);
-  transition: background 0.3s;
 }
 
 .divider-1 {
   height: 1px;
-  background: linear-gradient(
-    270deg,
-    hsla(var(--hue), 36%, 57%, 1),
-    hsla(var(--hue), 65%, 88%, 0.34)
-  );
+  background: linear-gradient(270deg,
+      hsla(var(--hue), 36%, 57%, 1),
+      hsla(var(--hue), 65%, 88%, 0.34));
 }
 
 .divider-2 {
   height: 1px;
-  background: linear-gradient(
-    270deg,
-    hsla(var(--hue), 65%, 88%, 0.34),
-    hsla(var(--hue), 36%, 57%, 1)
-  );
+  background: linear-gradient(270deg,
+      hsla(var(--hue), 65%, 88%, 0.34),
+      hsla(var(--hue), 36%, 57%, 1));
 }
 
-/* ==== LAYOUT ==================================== */
+/*====  LAYOUT ============================ */
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -127,26 +122,22 @@ body {
 
 #header {
   border-bottom: 1px solid #e4e4e4;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: flex;
 
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   background-color: var(--body-color);
+  width: 100%;
 }
 
 #header.scroll {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
 
-main {
-  margin-top: calc(var(--header-height) + 2rem);
-}
-
-/* ==== LOGO ==================================== */
+/*====  LOGO ============================ */
 .logo {
   font: 700 1.31rem var(--title-font);
   color: var(--title-color);
@@ -160,7 +151,7 @@ main {
   color: var(--body-color);
 }
 
-/* ==== NAVIGATION ==================================== */
+/*====  NAVIGATION ============================ */
 nav {
   height: var(--header-height);
   display: flex;
@@ -212,9 +203,9 @@ nav .menu ul {
   display: none;
 }
 
-/* ==== Mostrar Menu ========================= */
+/* Mostrar menu */
 nav.show .menu {
-  opacity: 100;
+  opacity: 1;
   visibility: visible;
 
   background: var(--body-color);
@@ -238,7 +229,7 @@ nav.show ul.grid {
   gap: 4rem;
 }
 
-/* Toggle Menu */
+/* toggle menu */
 .toggle {
   color: var(--base-color);
   font-size: 1.5rem;
@@ -258,11 +249,11 @@ nav .icon-close {
 
 nav.show div.icon-close {
   visibility: visible;
-  opacity: 100;
+  opacity: 1;
   top: 1.5rem;
 }
 
-/* ==== HOME ==================================== */
+/*====  HOME ============================ */
 #home {
   overflow: hidden;
 }
@@ -279,11 +270,12 @@ nav.show div.icon-close {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--base-color-second);
+  background: linear-gradient( to bottom right, #8f807d,#ffb47b, #ff7c5e, #745187,#331b4d 140%);
   position: absolute;
   top: -16.8%;
   left: 16.7%;
-  z-index: 0;
+  z-index: 0;  
+  
 }
 
 #home .image img {
@@ -310,7 +302,7 @@ nav.show div.icon-close {
   margin-bottom: 2rem;
 }
 
-/* ==== About ==================================== */
+/*====  ABOUT ============================ */
 #about {
   background: white;
 }
@@ -327,7 +319,7 @@ nav.show div.icon-close {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--base-color-second);
+  background: linear-gradient(to bottom right, #7E7F83, #E8F1F2, #0A0908);
   position: absolute;
   top: -8.3%;
   left: -33%;
@@ -348,7 +340,7 @@ nav.show div.icon-close {
   margin-right: 1.5rem;
 }
 
-/* ==== SERVICES ==================================== */
+/*====  SERVICES ============================ */
 .cards.grid {
   gap: 1.5rem;
 }
@@ -368,12 +360,12 @@ nav.show div.icon-close {
   color: var(--base-color);
 }
 
-.card .tile {
+.card .title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
-/* ==== TESTIMONIALS ==================================== */
+/*====  TESTIMONIALS ============================ */
 #testimonials {
   background: white;
 }
@@ -392,7 +384,7 @@ nav.show div.icon-close {
 #testimonials blockquote {
   padding: 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
 }
 
 #testimonials blockquote p {
@@ -424,7 +416,9 @@ nav.show div.icon-close {
   margin-right: 0.5rem;
 }
 
-/* Swiper */
+
+
+/* swiper */
 .swiper-slide {
   height: auto;
   padding: 4rem 1rem;
@@ -439,7 +433,7 @@ nav.show div.icon-close {
   background: var(--base-color);
 }
 
-/* ==== CONTACT ==================================== */
+/*====  CONTACT ============================ */
 #contact .grid {
   gap: 4rem;
 }
@@ -467,7 +461,7 @@ nav.show div.icon-close {
   color: var(--base-color);
 }
 
-/* ==== FOOTER ==================================== */
+/*====  FOOTER ============================ */
 footer {
   background: var(--base-color);
 }
@@ -497,7 +491,7 @@ footer .social {
 }
 
 footer .social a {
-  transition: 0.2s;
+  transition: 0.3s;
   display: inline-block;
 }
 
@@ -505,7 +499,7 @@ footer .social a:hover {
   transform: translateY(-8px);
 }
 
-/* Back To Top */
+/* Back to top */
 .back-to-top {
   background: var(--base-color);
   color: var(--text-color-light);
@@ -517,7 +511,8 @@ footer .social a:hover {
   padding: 0.5rem;
   clip-path: circle();
 
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  line-height: 0;
 
   visibility: hidden;
   opacity: 0;
@@ -532,10 +527,10 @@ footer .social a:hover {
   transform: translateY(0);
 }
 
-/* Responsivo */
+/*========= MEDIA QUERIES =========*/
 /* extra large devices: 1200 > */
 @media (min-width: 1200px) {
-  /* Reusable Classes */
+  /* reusable classes */
   .container {
     max-width: 1120px;
     margin-left: auto;
@@ -558,98 +553,6 @@ footer .social a:hover {
     height: 3.125rem;
   }
 
-  /* layout */
-  main {
-    margin-top: var(--header-height);
-  }
-
-  /* Testimonials */
-  #testimonials .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Contact */
-  #contact .container {
-    grid-auto-flow: column;
-    align-items: center;
-  }
-
-  #contact .text {
-    max-width: 25rem;
-  }
-
-  /* Footer */
-  footer.section {
-    padding: 3.75rem 0;
-  }
-
-  footer .container {
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  footer .logo {
-    font-size: 2.25rem;
-  }
-}
-/* large devices: 1023 > */
-@media (min-width: 1023px) {
-  /* Home */
-  #home .container {
-    grid-auto-flow: column;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
-
-  #home .image {
-    order: 1;
-  }
-
-  #home .text {
-    order: 0;
-    max-width: 24rem;
-    text-align: left;
-  }
-
-  /* about */
-  #about .container {
-    margin: 0 auto;
-    grid-auto-flow: column;
-  }
-
-  #about img {
-    width: 100%;
-    height: auto;
-  }
-}
-/* large devices: 992 > */
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
-  }
-
-  .cards {
-    display: flex;
-  }
-
-  .cards .card {
-    display: inline-block;
-    transition: 0.3s;
-  }
-
-  #services .cards .card:hover {
-    transform: scale(1.1, 1.1);
-  }
-
-  #services header {
-    margin-bottom: 2rem;
-  }
-}
-/* medium devices: 767 > */
-@media (min-width: 767px) {
   /* navigation */
   nav .menu {
     opacity: 1;
@@ -676,24 +579,85 @@ footer .social a:hover {
     display: none;
   }
 
-  /* Reusable Classes */
-  img {
-    width: 75%;
-    height: auto;
+  /* layout */
+  main {
+    margin-top: var(--header-height);
   }
 
-  /* About */
-  #about .image {
-    display: flex;
-    justify-content: center;
-  }
-  #about .image::before {
-    left: -20%;
-    top: -12%;
+  /* home */
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
   }
 
-  /* Footer */
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  /* about */
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /* services */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  #services p{
+    text-align: left;
+  }
+
+  /* testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* contact */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /* footer */
   footer.section {
     padding: 3.75rem 0;
   }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
+  }
 }
+/* large devices: 1023 > */
+/* large devices: 992 > */
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+/* medium devices: 767 > */
