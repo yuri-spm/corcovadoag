@@ -165,7 +165,7 @@ nav ul li {
 }
 
 nav ul li a {
-  transition: color 0.2s;
+  /*transition: color 0.2s;*/
   position: relative;
 }
 
@@ -184,7 +184,7 @@ nav ul li a::after {
   left: 0;
   bottom: -1.5rem;
 
-  transition: width 0.2s;
+  /*transition: width 0.2s;*/
 }
 
 nav ul li a:hover::after,
@@ -244,7 +244,7 @@ nav .icon-close {
   top: -1.5rem;
   right: 1.5rem;
 
-  transition: 0.2s;
+  /*transition: 0.2s;*/
 }
 
 nav.show div.icon-close {
@@ -518,7 +518,7 @@ footer .social a:hover {
   opacity: 0;
 
   transition: 0.3s;
-  transform: translateY(100%);
+  transform: translateY(50%); /*alterei aqui*/
 }
 
 .back-to-top.show {
